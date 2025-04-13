@@ -1,0 +1,29 @@
+[2025-04-13 20:38:48] sine of 30 = math.sin(math.radians(30)) = 0.49999999999999994
+[2025-04-13 20:39:06] sine of 30 = math.sin(math.radians(30)) = 0.49999999999999994
+[2025-04-13 20:39:12] log of 10 = math.log10(10) = 1.0
+[2025-04-13 20:39:48] tan of 30 = math.tan(math.radians(30)) = 0.5773502691896257
+[2025-04-13 20:44:37] sine of 30 = math.sin(math.radians(30)) = 0.49999999999999994
+[2025-04-13 20:52:10] sine of 30 = math.sin(math.radians(30)) = 0.49999999999999994
+[2025-04-13 20:55:14] sine of 30 = 0.49999999999999994
+[2025-04-13 20:55:23] cosine of 45 = Error: 'NoneType' object is not subscriptable
+[2025-04-13 20:55:38] cosine of 45 = Error: 'NoneType' object is not subscriptable
+[2025-04-13 21:15:25] sine of 30 = 0.49999999999999994
+[2025-04-13 21:15:29] cosine of 45 = Error: 'NoneType' object is not subscriptable
+[2025-04-13 21:18:10] log of 1000 = 3.0
+[2025-04-13 21:18:20] factorial of 5 = 120
+[2025-04-13 21:23:02] sine of 30 = Error: invalid syntax (<string>, line 1)
+[2025-04-13 21:23:06] log of 1000 = 3.0
+[2025-04-13 21:23:10] sine of 30 = Error: invalid syntax (<string>, line 1)
+[2025-04-13 21:23:19] factorial of 5 = 120
+[2025-04-13 21:23:26] Sorry, I didn't understand that. = Error: unterminated string literal (detected at line 1) (<string>, line 1)
+[2025-04-13 21:23:29] 1+2 = 3
+[2025-04-13 21:23:45] ten mod three = 1
+[2025-04-13 21:44:41] log of 1000 = 3.0
+[2025-04-13 21:45:04] oneplus = Error: invalid syntax (<string>, line 1)
+[2025-04-13 21:45:11] oneplus 2 = Error: 'NoneType' object is not subscriptable
+[2025-04-13 21:45:23] 100 + 100 = 200
+[2025-04-13 21:45:35] two factorial = Error: invalid syntax (<string>, line 1)
+[2025-04-13 21:45:43] Sorry, I didn't understand that. = Error: unterminated string literal (detected at line 1) (<string>, line 1)
+[2025-04-13 21:45:43] Sorry, I didn't understand that. = Error: unterminated string literal (detected at line 1) (<string>, line 1)
+[2025-04-13 21:46:00] factorial of 5 = 120
+[2025-04-13 21:56:13] log of 1000 = 3.0

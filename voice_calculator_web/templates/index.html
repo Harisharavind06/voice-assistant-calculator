@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice Assistant Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+	
+        .container {
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff9800, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1 1 45%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        #mic-btn {
+            background-color: transparent;
+            font-size: 24px;
+            animation: micPulse 2s infinite;
+            border: none;
+        }
+
+        @keyframes micPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .result, .history {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #00e676;
+            overflow-y: auto;
+            max-height: 150px;
+        }
+
+        .help-popup {
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .branding {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffb74d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="branding">🔮 Harish AI Calculator</div>
+        <h1>Voice Assistant Calculator</h1>
+
+        <form method="post">
+            <input type="text" name="expression" placeholder="Type or speak an expression">
+            <div class="buttons">
+                <button type="submit">Calculate</button>
+                <button type="button" id="mic-btn" onclick="startListening()">🎙️</button>
+                <button type="button" onclick="showHelp()">❓ Help</button>
+            </div>
+        </form>
+
+        {% if result %}
+        <div class="result">Result: {{ result }}</div>
+        {% endif %}
+
+        <div class="history">
+            <strong>🕘 History:</strong><br>
+            {% for line in history %}
+                {{ line }}<br>
+            {% endfor %}
+        </div>
+
+        <div id="help-box" class="help-popup" style="display: none;">
+            🧠 <strong>How to Use</strong><br><br>
+            ✅ Say or type:<br>
+            • "one plus two"<br>
+            • "square root of sixteen"<br>
+            • "factorial of five"<br>
+            • "log of hundred"<br><br>
+            ✅ Speak in simple terms!<br>
+            🎙️ Use the mic to speak expressions.<br>
+            📄 Check your calculation history below.
+        </div>
+    </div>
+
+    <script>
+        function startListening() {
+            window.location.href = "/?voice=1";
+        }
+
+        function showHelp() {
+            const helpBox = document.getElementById("help-box");
+            helpBox.style.display = helpBox.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
